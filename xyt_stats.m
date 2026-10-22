@@ -1,4 +1,4 @@
-%% e_xyt_stats.m - Effects of X- and Y-chromosome dosage and testicular hormones on subcortical shape
+%% xyt_stats.m - Effects of X- and Y-chromosome dosage and testicular hormones on subcortical shape
 %
 % Lee HM, Liu S, Lalonde FM, et al. Sex Differences in Human Subcortical Anatomy
 % are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned
