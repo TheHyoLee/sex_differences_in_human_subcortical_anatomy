@@ -10,17 +10,15 @@ We mapped sex differences in the volume and shape of the striatum, pallidum, tha
 
 ## Scripts
 
-| Script | Analysis | Requires output of |
-| --- | --- | --- |
-| `b_hcp_stats.m` | Sex differences in subcortical volume and shape in early adulthood (HCP-YA); comparison of size-correction methods; Moran spectral randomization null maps | — |
-| `c_ukb_stats.m` | The same models in an independent mid-adulthood cohort (UK Biobank, ages 45–50) | — |
-| `d_replication.m` | Within-sample reproducibility (sex-balanced split-half subsampling, n = 50–450) and between-sample replicability (HCP-YA vs. UKB) | `b`, `c` |
-| `e_xyt_stats.m` | Effects of X-chromosome dosage (XXY), Y-chromosome dosage (XYY) and testicular hormones (IGD), and their spatial congruence with sex differences | `b` |
-| `f_abcd_stats.m` | Subcortical and cortical sex differences in pre/early puberty (ABCD, age 9) and comparison with adulthood | `b` (and `e` for the final exploratory section) |
+| Script | Analysis |
+| --- | --- |
+| `hcp_stats.m` | Sex differences in subcortical volume and shape in early adulthood (HCP-YA); comparison of size-correction methods; Moran spectral randomization null maps |
+| `ukb_stats.m` | The same models in an independent mid-adulthood cohort (UK Biobank, ages 45–50) |
+| `replication.m` | Within-sample reproducibility (sex-balanced split-half subsampling, n = 50–450) and between-sample replicability (HCP-YA vs. UKB) |
+| `xyt_stats.m` | Effects of X-chromosome dosage (XXY), Y-chromosome dosage (XYY) and testicular hormones (IGD), and their spatial congruence with sex differences |
+| `abcd_stats.m` | Subcortical and cortical sex differences in pre/early puberty (ABCD, age 9) and comparison with adulthood |
 
-Run the scripts in order (`b` → `c` → `d`, `e`, `f`). Each one is organized into sections (`%%`) meant to be run in sequence with MATLAB's *Run Section*. Scripts that generate supplementary figures are not included.
-
-## Requirements
+## Dependencies
 
 - MATLAB R2016b or later, with the Statistics and Machine Learning Toolbox and the Parallel Computing Toolbox (`parfor` in `d_replication.m`; you can replace it with `for`)
 - [SurfStat](https://www.math.mcgill.ca/keith/surfstat/) (`SurfStatLinMod`, `SurfStatT`, `term`)
@@ -31,19 +29,6 @@ Run the scripts in order (`b` → `c` → `d`, `e`, `f`). Each one is organized 
 
 Some custom visualization functions (`loadColorMaps`, `ThreshColorMap`, `HyoMagetView*`, `HyoSurfacePlotFunction`) are not included. They only affect figure rendering, not the statistics.
 
-## Setup
-
-Edit the **Paths** section at the top of each script:
-
-```matlab
-toolboxDir         = '/path/to/matlab_toolboxes';
-templateDir        = '/path/to/maget_templates';
-codeDir            = '/path/to/this_repository';
-dataDir            = '/path/to/processed_data';
-corticalResultsDir = '/path/to/cortical_study_results';
-figDir             = '/path/to/figures/<analysis>';
-```
-
 ## Data
 
 Participant-level data are not included in this repository.
@@ -51,18 +36,7 @@ Participant-level data are not included in this repository.
 - **HCP-YA** (S1200 release): https://db.humanconnectome.org/, available to registered users who accept the data use terms
 - **UK Biobank**: https://www.ukbiobank.ac.uk, available to approved researchers via application
 - **ABCD** (Release 2.0.0): NIMH Data Archive, https://nda.nih.gov/
-- **NIH clinical cohorts** (sex chromosome aneuploidies, IGD): not publicly available because of participant privacy; available from the corresponding author on reasonable request with a data use agreement
-
-The scripts expect each cohort as a MATLAB struct (e.g., `HCP`) with these fields:
-
-| Field | Contents |
-| --- | --- |
-| `VOL.<S>_L`, `VOL.<S>_R` | Bulk volume per hemisphere (subjects × 1) |
-| `MOR.<S>` | Vertex-wise surface area (subjects × vertices, left then right hemisphere) |
-| `SEX` (or `GRP` for IGD), `AGE`, `TBV`, `SITE` | Covariates (`SEX`: 1 = female, 0 = male) |
-| `QC.ind<S>` | Logical index of scans passing quality control |
-
-`<S>` is one of `STR`, `GP`, `THAL`, `HIPP`, `AMYG`.
+- **NIH clinical cohorts** (sex chromosome aneuploidies, isolated gonadotropin-releasing hormone deficiency): not publicly available because of participant privacy; available from the corresponding author on reasonable request with a data use agreement
 
 Group-level statistical maps will be provided as source data on publication.
 
