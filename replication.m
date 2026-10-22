@@ -1,4 +1,4 @@
-%% d_replication.m - Within-sample reproducibility and between-sample replicability
+%% replication.m - Within-sample reproducibility and between-sample replicability
 %
 % Lee HM, Liu S, Lalonde FM, et al. Sex Differences in Human Subcortical Anatomy
 % are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned
