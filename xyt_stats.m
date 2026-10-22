@@ -12,8 +12,8 @@
 %   sex differences using Moran spectral randomization.
 %
 % Inputs (participant-level data are not shared; see Data availability):
-%   - <dataDir>/XXY_*.mat, XYY_*.mat, IGD_*.mat (structs XXY, XYY, IGD)
-%   - <dataDir>/HCP_results.mat (from b_hcp_stats.m)
+%   - <dataDir>/XXY.mat, XYY.mat, IGD.mat (structs XXY, XYY, IGD)
+%   - <dataDir>/HCP_results.mat (from hcp_stats.m)
 %   - <templateDir>/maget_template_surfaces_distance_area.mat
 %   - <corticalResultsDir>/sca_groupmaps_final.mat, igd_groupmaps_final.mat
 %     (cortical maps from Lee et al., Nature Communications 2026)
@@ -53,11 +53,8 @@ addpath(genpath(codeDir));
 % load(fullfile(dataDir, 'XYY.mat'));
 % load(fullfile(dataDir, 'IGD.mat'));
 
-% ...or previously computed results
-load(fullfile(dataDir, 'XXY_results.mat'));
-load(fullfile(dataDir, 'XYY_results.mat'));
-load(fullfile(dataDir, 'IGD_results.mat'));
-load(fullfile(dataDir, 'HCP_results.mat')); % HCP-YA sex effects and spatial nulls (b_hcp_stats.m)
+% Load previously computed results for HCP
+load(fullfile(dataDir, 'HCP_results.mat')); % HCP-YA sex effects and spatial nulls (hcp_stats.m)
 
 % Load surface area maps for the template surfaces
 load(fullfile(templateDir, 'maget_template_surfaces_distance_area.mat'));
