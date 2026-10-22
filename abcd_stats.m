@@ -1,4 +1,4 @@
-%% f_abcd_stats.m - Sex differences in pre/early puberty (ABCD-9Y) and comparison with adulthood
+%% abcd_stats.m - Sex differences in pre/early puberty (ABCD-9Y) and comparison with adulthood
 %
 % Lee HM, Liu S, Lalonde FM, et al. Sex Differences in Human Subcortical Anatomy
 % are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned
