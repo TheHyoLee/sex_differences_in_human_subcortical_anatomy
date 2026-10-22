@@ -1,4 +1,4 @@
-%% b_hcp_stats.m - Sex differences in subcortical volume and shape in early adulthood (HCP-YA)
+%% hcp_stats.m - Sex differences in subcortical volume and shape in early adulthood (HCP-YA)
 %
 % Lee HM, Liu S, Lalonde FM, et al. Sex Differences in Human Subcortical Anatomy
 % are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned
