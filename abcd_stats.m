@@ -13,7 +13,7 @@
 %
 % Inputs (participant-level data are not shared; see Data availability):
 %   - <dataDir>/ABCD.mat (struct ABCD)
-%   - <dataDir>/HCP_results.mat (from b_hcp_stats.m)
+%   - <dataDir>/HCP_results.mat (from hcp_stats.m)
 %   - <templateDir>/maget_template_surfaces_distance_area.mat
 %   - fsaverage_7.1.0.mat, glasser_fsaverage_7.1.0.mat, Vasa_G360.mat
 %     (cortical surface, Glasser parcellation, and spin permutations; on the
