@@ -1,4 +1,4 @@
-%% c_ukb_stats.m - Sex differences in subcortical volume and shape in mid-adulthood (UK Biobank)
+%% ukb_stats.m - Sex differences in subcortical volume and shape in mid-adulthood (UK Biobank)
 %
 % Lee HM, Liu S, Lalonde FM, et al. Sex Differences in Human Subcortical Anatomy
 % are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned
