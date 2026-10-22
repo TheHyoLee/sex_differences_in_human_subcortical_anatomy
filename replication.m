@@ -13,8 +13,8 @@
 %   Requires the Parallel Computing Toolbox for parfor (or replace with for).
 %
 % Inputs (participant-level data are not shared; see Data availability):
-%   - <dataDir>/HCP_results.mat (from b_hcp_stats.m)
-%   - <dataDir>/UKB_results.mat (from c_ukb_stats.m)
+%   - <dataDir>/HCP_results.mat (from hcp_stats.m)
+%   - <dataDir>/UKB_results.mat (from ukb_stats.m)
 %   - <templateDir>/maget_template_surfaces_distance_area.mat
 %
 % Outputs:
