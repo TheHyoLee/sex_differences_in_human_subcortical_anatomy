@@ -46,7 +46,7 @@ Released under the MIT License (see `LICENSE`).
 
 ## Acknowledgments
 
-Supported by the Intramural Research Program of the National Institute of Mental Health (1ZIAMH002949-10).
+Supported by the Intramural Research Program of the National Institute of Mental Health (1ZIAMH002949).
 
 ## Contact
 
