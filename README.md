@@ -20,7 +20,7 @@ We mapped sex differences in the volume and shape of the striatum, pallidum, tha
 
 ## Dependencies
 
-- MATLAB R2016b or later, with the Statistics and Machine Learning Toolbox and the Parallel Computing Toolbox (`parfor` in `d_replication.m`; you can replace it with `for`)
+- MATLAB R2016b or later, with the Statistics and Machine Learning Toolbox and the Parallel Computing Toolbox
 - [SurfStat](https://www.math.mcgill.ca/keith/surfstat/) (`SurfStatLinMod`, `SurfStatT`, `term`)
 - [BrainSpace](https://github.com/MICA-MNI/BrainSpace) (`surface_to_graph`, `compute_mem`, `moran_randomization`)
 - `fdr_bh` (Benjamini–Hochberg FDR) and `hexscatter` (MATLAB File Exchange)
